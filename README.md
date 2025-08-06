@@ -5,19 +5,22 @@ A full-stack **Travel Booking System** built with the **MERN stack** (MongoDB, E
 ---
 
 ## 🚀 Live Preview
-🔗 https://gleeful-beignet-6155b2.netlify.app
+🔗 https://gleeful-beignet-6155b2.netlify.app/
+
+
+### 🔑 Admin Login Credentials  
+**Email:** `admin@gmail.com`  
+**Password:** `12345`
 
 ---
 
 ## 🖼️ Screenshots
 
 ### 🔹 Home Page
-(<img width="1592" height="777" alt="Home" src="https://github.com/user-attachments/assets/a83d87da-119c-4830-b9fe-6393a95c52e7" />
-)
+<img width="1592" height="777" alt="Home" src="https://github.com/user-attachments/assets/a83d87da-119c-4830-b9fe-6393a95c52e7" />
 
 ### 🔹 Featured Tour
 <img width="1305" height="868" alt="Featured Tour" src="https://github.com/user-attachments/assets/75d42f85-0061-4258-bd3b-b559f135f01d" />
-
 
 ### 🔹 Booking
 <img width="856" height="876" alt="Booking" src="https://github.com/user-attachments/assets/f22e1285-72ba-49b5-9a96-012d56b85112" />
@@ -39,7 +42,7 @@ A full-stack **Travel Booking System** built with the **MERN stack** (MongoDB, E
 ## 🧑‍💻 Tech Stack
 
 ### 🔸 Frontend
-- **React.js** (SPA)
+- **React.js** 
 - **React Router** for navigation
 - **Axios** for API calls
 
@@ -52,18 +55,34 @@ A full-stack **Travel Booking System** built with the **MERN stack** (MongoDB, E
 ---
 
 ## ✨ Features
+🔐 Secure Authentication & Role Management
 
-- 🔐 **JWT Authentication & Authorization**
-  - Users & Admins with secure login
-- 📅 **Tour Listings**
-  - Dynamic data fetched from backend
-- 📂 **Bookings Management**
-  - Personalized dashboard to view and manage user bookings
-- 🛠️ **Admin Panel**
-  - Manage tours, users, and bookings (CRUD)
-- 🚫 **Secure Routing**
-  - Backend route protection using middlewares
+Implemented JWT-based authentication for secure login/logout and protected routes.
 
+Enabled role-based access control, restricting admin functionality from regular users.
 
+🧭 Dynamic Tour Discovery
+
+Users can browse, filter, and search available tours using data fetched from the backend.
+
+Integrated clean UI with loading states and error handling.
+
+🧾 User Dashboard - My Bookings
+
+Personalized user dashboard to view, manage, and cancel bookings in real time.
+
+Booking data persisted in MongoDB and dynamically rendered on the frontend.
+
+🛠️ Admin Panel for Tour & User Management
+
+Admins can create, update, and delete tours and view/manage all registered users.
+
+Admin panel built with protected routes and server-side validation.
+
+🧩 RESTful APIs & Modular Backend
+
+Developed structured, reusable, and scalable RESTful API endpoints using Express.js.
+
+Middleware used for authentication, error handling, and route protection.
 
 
