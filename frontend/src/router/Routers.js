@@ -1,16 +1,16 @@
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 
-import Home from '../pages/Home'
-import Tours from '../pages/Tours'
-import Login from '../pages/Login'
-import Register from '../pages/Register'
-import SearchResult from '../pages/SearchResult'
-import TourDetails from '../pages/TourDetails'
-import ThankYou from '../pages/ThankYou'
-import MyBookings from '../pages/my-Booking'
-import AdminPanel from '../pages/AdminPanel'
-import Payment from '../pages/Payment'
+import Home from '../pages/Home.jsx'
+import Tours from '../pages/Tours.jsx'
+import Login from '../pages/Login.jsx'
+import Register from '../pages/Register.jsx'
+import SearchResult from '../pages/SearchResult.jsx'
+import TourDetails from '../pages/Tourdetails.jsx'
+import ThankYou from '../pages/ThankYou.jsx'
+import MyBookings from '../pages/my-Booking.jsx'
+import AdminPanel from '../pages/AdminPanel.jsx'
+import Payment from '../pages/Payment.jsx'
 
 const Routers = () => {
   return (
