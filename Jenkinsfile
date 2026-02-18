@@ -3,16 +3,15 @@ pipeline {
 
     stages {
 
-
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t mern-backend .'
+                bat 'docker build -t travel-app .'
             }
         }
 
         stage('Run Container') {
             steps {
-                bat 'docker run -d -p 4000:4000 mern-backend'
+                bat 'docker run -d -p 5000:5000 travel-app'
             }
         }
     }
