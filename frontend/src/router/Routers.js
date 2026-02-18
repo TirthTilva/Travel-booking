@@ -1,16 +1,16 @@
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 
-import Home from '../pages/Home';
-import Tours from '../pages/Tours';
-import Login from '../pages/Login';
-import Register from '../pages/Register';
-import SearchResult from '../pages/SearchResult';   // ✅ capital R
-import TourDetails from '../pages/TourDetails';     // ✅ capital D
-import ThankYou from '../pages/ThankYou';
-import MyBookings from '../pages/my-Booking';
-import AdminPanel from '../pages/AdminPanel';
-import Payment from '../pages/Payment';
+import Home from '../pages/Home'
+import Tours from '../pages/Tours'
+import Login from '../pages/Login'
+import Register from '../pages/Register'
+import SearchResult from '../pages/SearchResult'
+import TourDetails from '../pages/TourDetails'
+import ThankYou from '../pages/ThankYou'
+import MyBookings from '../pages/My-Booking'
+import AdminPanel from '../pages/AdminPanel'
+import Payment from '../pages/Payment'
 
 const Routers = () => {
   return (
@@ -24,10 +24,10 @@ const Routers = () => {
       <Route path='/tours/:id' element={<TourDetails />} />
       <Route path='/tours/search' element={<SearchResult />} />
       <Route path='/my-bookings' element={<MyBookings />} />
-      <Route path="/admin" element={<AdminPanel />} />
-      <Route path="/payment" element={<Payment />} />
+      <Route path='/admin' element={<AdminPanel />} />
+      <Route path='/payment' element={<Payment />} />
     </Routes>
-  );
-};
+  )
+}
 
-export default Routers;
+export default Routers
