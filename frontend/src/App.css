@@ -2,8 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 :root {
+<<<<<<< Updated upstream
   --primary-color: #002349;
   --secondary-color: #002349;
+=======
+  --primary-color: #003740;
+  --secondary-color: #faa935;
+>>>>>>> Stashed changes
   --heading-color: #0b2727;
   --text-color: #e9a908;
   --font-name: "Montserrat", sans-serif;

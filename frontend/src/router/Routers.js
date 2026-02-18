@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import Tours from '../pages/Tours';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
+<<<<<<< Updated upstream
 import Searchresult from '../pages/SearchResult';
 import Tourdetails from '../pages/TourDetails';
 import ThankYou from '../pages/ThankYou';
@@ -13,6 +14,11 @@ import AdminPanel from '../pages/AdminPanel';
 import Payment from '../pages/Payment';
 
 const Routers = () => {
+=======
+import Searchresult from '../pages/Searchresult';
+import Tourdetails from '../pages/Tourdetails';
+const routers = () => {
+>>>>>>> Stashed changes
   return (
      <Routes>
         <Route path='/' element={<Navigate to='/Home'/>} />
@@ -23,10 +29,13 @@ const Routers = () => {
         <Route path='/tours' element={<Tours/>} />
         <Route path='/tours/:id' element={<Tourdetails/>} />
         <Route path='/tours/search' element={<Searchresult/>} />
+<<<<<<< Updated upstream
         <Route path='/my-bookings' element={<MyBookings/>}/>
         <Route path="/admin" element={<AdminPanel />} />
         <Route path="/payment" element={<Payment />} />
 
+=======
+>>>>>>> Stashed changes
      </Routes>
   );
 };
