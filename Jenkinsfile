@@ -2,12 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repository') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/TirthTilva/Travel-booking.git'
-            }
-        }
+
 
         stage('Build Docker Image') {
             steps {
