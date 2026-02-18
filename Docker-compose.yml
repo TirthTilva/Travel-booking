@@ -14,7 +14,7 @@ services:
     build: ./backend
     container_name: travel-backend
     ports:
-      - "5000:4000"
+      - "5050:4000"
     env_file:
       - ./backend/.env
     depends_on:
