@@ -11,7 +11,7 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                bat 'docker run -d -p 5000:5000 travel-backend'
+                bat 'docker run -d -p 4000:4000 travel-backend'
             }
         }
     }
