@@ -8,7 +8,7 @@ import Register from '../pages/Register'
 import SearchResult from '../pages/SearchResult'
 import TourDetails from '../pages/TourDetails'
 import ThankYou from '../pages/ThankYou'
-import MyBookings from '../pages/My-Booking'
+import MyBookings from '../pages/my-Booking'
 import AdminPanel from '../pages/AdminPanel'
 import Payment from '../pages/Payment'
 
