@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/YashPatel216/Travel-booking.git'
+                    url: 'https://github.com/TirthTilva/Travel-booking.git'
             }
         }
 
