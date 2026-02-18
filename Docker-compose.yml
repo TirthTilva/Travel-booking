@@ -1,27 +1,44 @@
 version: "3.8"
 
 services:
+  mongo:
+    image: mongo:latest
+    container_name: travel-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - travel-network
+    restart: always
 
   backend:
     build: ./backend
+    container_name: travel-backend
     ports:
       - "4000:4000"
     env_file:
       - ./backend/.env
     depends_on:
       - mongo
+    networks:
+      - travel-network
     restart: always
 
   frontend:
     build: ./frontend
+    container_name: travel-frontend
     ports:
-      - "3000:3000"
+      - "3000:80"
     depends_on:
       - backend
+    networks:
+      - travel-network
     restart: always
 
-  mongo:
-    image: mongo
-    ports:
-      - "27017:27017"
-    restart: always
+volumes:
+  mongo-data:
+
+networks:
+  travel-network:
+    driver: bridge
