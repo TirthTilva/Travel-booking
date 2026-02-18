@@ -1,12 +1,12 @@
-import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import React from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
 
 import Home from '../pages/Home';
 import Tours from '../pages/Tours';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
-import Searchresult from '../pages/SearchResult';
-import Tourdetails from '../pages/TourDetails';
+import SearchResult from '../pages/SearchResult';   // ✅ capital R
+import TourDetails from '../pages/TourDetails';     // ✅ capital D
 import ThankYou from '../pages/ThankYou';
 import MyBookings from '../pages/my-Booking';
 import AdminPanel from '../pages/AdminPanel';
@@ -21,11 +21,11 @@ const Routers = () => {
       <Route path='/register' element={<Register />} />
       <Route path='/thank-you' element={<ThankYou />} />
       <Route path='/tours' element={<Tours />} />
-      <Route path='/tours/:id' element={<Tourdetails />} />
+      <Route path='/tours/:id' element={<TourDetails />} />
       <Route path='/tours/search' element={<SearchResult />} />
       <Route path='/my-bookings' element={<MyBookings />} />
-      <Route path='/admin' element={<AdminPanel />} />
-      <Route path='/payment' element={<Payment />} />
+      <Route path="/admin" element={<AdminPanel />} />
+      <Route path="/payment" element={<Payment />} />
     </Routes>
   );
 };
