@@ -18,20 +18,14 @@ const corsOptions ={
 app.use('/tour-images', express.static('tour-images'));
 mongoose.set("strictQuery",false)
 const connect = async () => {
-    try {
-        await mongoose.connect(process.env.MONGO_URL,{
-            useNewUrlParser:true,
-            useUnifiedTopology:true,
-        });
+  try {
+    await mongoose.connect(process.env.MONGO_URL);
+    console.log("MongoDB Database connected");
+  } catch (err) {
+    console.log("Connection failed:", err.message);
+  }
+};
 
-
-        console.log('MongoDb Database connected')
-    }
-    catch {
-        console.log("connection failed");
-
-    }
-}
 app.get("/", (req, res) => {
     res.send('api is working');
 });
