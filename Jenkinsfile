@@ -3,16 +3,29 @@ pipeline {
 
     stages {
 
-        stage('Build Docker Image') {
+        stage('Stop Old Containers') {
             steps {
-                bat 'docker build -t travel-backend ./backend'
+                bat 'docker-compose down'
             }
         }
 
-        stage('Run Container') {
+        stage('Build Images') {
             steps {
-                bat 'docker run -d -p 4000:4000 travel-backend'
+                bat 'docker-compose build'
             }
+        }
+
+        stage('Run Containers') {
+            steps {
+                bat 'docker-compose up -d'
+            }
+        }
+
+    }
+
+    post {
+        always {
+            echo 'Deployment Completed'
         }
     }
 }
