@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-deployment
+  name: backend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: backend
@@ -17,20 +17,10 @@ spec:
           image: yashpatel0296/travel-world-app:01
           ports:
             - containerPort: 4000
-
-          # 👇 THIS PART YOU ADD HERE
           env:
             - name: PORT
               value: "4000"
-
             - name: MONGO_URL
-              valueFrom:
-                secretKeyRef:
-                  name: backend-secret
-                  key: MONGO_URL
-
+              value: "mongodb+srv://tirth:12345@cluster0.72ocusv.mongodb.net/tours_booking?retryWrites=true&w=majority&appName=Cluster0"
             - name: JWT_SECRET_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: backend-secret
-                  key: JWT_SECRET_KEY
+              value: "gahg48589a45ajfjAUFAHHFIhufuu"

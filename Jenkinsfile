@@ -1,57 +1,37 @@
 pipeline {
     agent any
 
-    environment {
-        DOCKER_COMPOSE = 'docker-compose'
-    }
-
     stages {
-        stage('Checkout') {
+
+        stage('Clone Repo') {
             steps {
-                echo 'Checking out code...'
-                checkout scm
+                git 'https://github.com/TirthTilva/Travel-booking.git'
             }
         }
 
-        stage('Stop Old Containers') {
+        stage('Build Backend') {
             steps {
-                echo 'Stopping old containers...'
-                bat "${DOCKER_COMPOSE} down"
+                sh 'docker build -t yashpatel0296/travel-world-app:01 ./backend'
             }
         }
 
-        stage('Build Images') {
+        stage('Build Frontend') {
             steps {
-                echo 'Building Docker images...'
-                bat "${DOCKER_COMPOSE} build --no-cache"
+                sh 'docker build -t yashpatel0296/travel-world-app:02 ./frontend'
             }
         }
 
-        stage('Run Containers') {
+        stage('Push Images') {
             steps {
-                echo 'Starting containers...'
-                bat "${DOCKER_COMPOSE} up -d"
+                sh 'docker push yashpatel0296/travel-world-app:01'
+                sh 'docker push yashpatel0296/travel-world-app:02'
             }
         }
 
-        stage('Verify Deployment') {
+        stage('Deploy to Kubernetes') {
             steps {
-                echo 'Verifying deployment...'
-                bat "${DOCKER_COMPOSE} ps"
+                sh 'kubectl apply -f k8s/'
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'Deployment Completed Successfully!'
-        }
-        failure {
-            echo 'Deployment Failed!'
-            bat "${DOCKER_COMPOSE} logs"
-        }
-        always {
-            echo 'Pipeline Finished'
         }
     }
 }
